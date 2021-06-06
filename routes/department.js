@@ -17,10 +17,10 @@ router.get("/", (req, res) => {
 
 router.get("/:name", (req, res) => {
   const findDept = departments.find(
-    (dept) => dept.departmentname === req.params.name
+    (dept) => dept.hospitalname === req.params.name
   );
   if (!findDept) {
-    res.status(404).send("Department with name was not found");
+    res.status(404).send("Hospital with name was not found");
   } else {
     res.json(findDept);
   }
