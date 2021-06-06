@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:name", (req, res) => {
-  const findDept = departments.find(
+  const findDept = departments.filter(
     (dept) => dept.hospitalname === req.params.name
   );
   if (!findDept) {
